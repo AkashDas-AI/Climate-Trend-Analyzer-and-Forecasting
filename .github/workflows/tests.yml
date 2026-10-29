@@ -32,6 +32,11 @@ jobs:
           python -m pip install -r requirements.txt
           python -m pip install -e .
 
+      - name: Fetch NOAA Dataset (Optional)
+        continue-on-error: true
+        run: |
+          python -c "from climate_analyzer.ingest import download_noaa_ghcn_station; from pathlib import Path; download_noaa_ghcn_station('USW00094728', Path('data/raw'))"
+
       - name: Run Test Suite
         run: |
           python -m pytest -v

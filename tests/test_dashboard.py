@@ -141,6 +141,8 @@ def test_missing_data_fail_fast_behavior(tmp_path):
 
 def test_baseline_invariance_for_ols_and_sens_slope():
     """Verify baseline invariance across complete calendar years and full operational records."""
+    if not Path("data/raw/USW00094728.csv").exists():
+        pytest.skip("Real NOAA observation file data/raw/USW00094728.csv not found")
     from climate_analyzer.ingest import load_climate_dataset
     raw = load_climate_dataset("USW00094728", raw_dir="data/raw", allow_download=False)
     clean = clean_daily_observations(raw)
@@ -216,6 +218,8 @@ def test_baseline_invariance_for_ols_and_sens_slope():
 
 def test_1869_incomplete_year_leverage_reconciliation():
     """Verify that the 1869 11-month seasonal deviation quantitatively explains the full-series slope variance."""
+    if not Path("data/raw/USW00094728.csv").exists():
+        pytest.skip("Real NOAA observation file data/raw/USW00094728.csv not found")
     from climate_analyzer.ingest import load_climate_dataset
     raw = load_climate_dataset("USW00094728", raw_dir="data/raw", allow_download=False)
     clean = clean_daily_observations(raw)
@@ -252,6 +256,8 @@ def test_full_record_statistical_tolerances_and_mk_mechanism():
     """Verify exact full-record statistical tolerances, distinguish unrounded differences
     from 3-decimal rounded KPI display equality, and verify the Mann-Kendall pairwise sign-flip mechanism.
     """
+    if not Path("data/raw/USW00094728.csv").exists():
+        pytest.skip("Real NOAA observation file data/raw/USW00094728.csv not found")
     from climate_analyzer.ingest import load_climate_dataset
     raw = load_climate_dataset("USW00094728", raw_dir="data/raw", allow_download=False)
     clean = clean_daily_observations(raw)
@@ -342,6 +348,8 @@ def test_full_record_statistical_tolerances_and_mk_mechanism():
 
 def test_dashboard_pathway_invariance_and_display_agreement():
     """Verify that the dashboard calculation pathway maintains consistent sample sizes and displayed KPIs."""
+    if not Path("data/raw/USW00094728.csv").exists():
+        pytest.skip("Real NOAA observation file data/raw/USW00094728.csv not found")
     from climate_analyzer.ingest import load_climate_dataset
     raw = load_climate_dataset("USW00094728", raw_dir="data/raw", allow_download=False)
     clean = clean_daily_observations(raw)
@@ -441,6 +449,8 @@ def test_moving_average_window_configurations_and_export_schema():
 
 def test_forecast_export_partitioning_and_metadata():
     """Verify that validated benchmark ML export contains exactly 309 rows and correct schema and metadata."""
+    if not Path("data/raw/USW00094728.csv").exists():
+        pytest.skip("Real NOAA observation file data/raw/USW00094728.csv not found")
     from climate_analyzer.ingest import load_climate_dataset
     raw = load_climate_dataset("USW00094728", raw_dir="data/raw", allow_download=False)
     clean = clean_daily_observations(raw)
@@ -506,6 +516,8 @@ def test_forecast_export_partitioning_and_metadata():
 
 def test_exploratory_split_labeling_and_isolation():
     """Verify that exploratory split scenario partitions differently and flags metadata as exploratory."""
+    if not Path("data/raw/USW00094728.csv").exists():
+        pytest.skip("Real NOAA observation file data/raw/USW00094728.csv not found")
     from climate_analyzer.ingest import load_climate_dataset
     raw = load_climate_dataset("USW00094728", raw_dir="data/raw", allow_download=False)
     clean = clean_daily_observations(raw)
