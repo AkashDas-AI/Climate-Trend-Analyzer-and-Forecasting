@@ -460,3 +460,12 @@ This project is licensed under the **MIT License**. Full legal terms are provide
 - **Primary Domain**: Data Science, Climate Informatics, Time-Series Modeling, Machine Learning
 - **Repository Guidelines**: Please see [`CONTRIBUTING.md`](file:///d:/Projects/Data%20Science/Climate%20Trend%20Analyzer/CONTRIBUTING.md) for testing guidelines and development workflows.
 
+---
+
+## Contribution and Contact
+
+Contributions, bug reports, and suggestions are welcome. Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for details on code style, typing standards, and testing policies before opening a pull request.
+
+- **Author**: Akash Das
+- **Issue Tracker**: Use the GitHub repository issue tracker to report defects or propose enhancements.
+
