@@ -1,0 +1,168 @@
+{
+  "execution_date": "2026-10-29 01:22:23",
+  "dataset_info": {
+    "dataset_name": "NOAA GHCN-Daily",
+    "station_id": "USW00094728",
+    "station_name": "NY CITY CENTRAL PARK, NY US",
+    "latitude": 40.77898,
+    "longitude": -73.96925,
+    "elevation": 42.7,
+    "start_date": "1869-01-01",
+    "end_date": "2026-10-24",
+    "total_daily_records": 57640,
+    "total_monthly_records": 1893,
+    "baseline_period": "1951-1980 Mean"
+  },
+  "linear_trend": {
+    "slope_per_year": 0.0161834048314194,
+    "decadal_rate": 0.161834048314194,
+    "intercept": -31.746219233728368,
+    "r_value": 0.7559328962620793,
+    "r_squared": 0.5714345436511755,
+    "p_value": 2.5519364849752794e-30,
+    "p_value_bound": "< 1e-24",
+    "std_err": 0.001125717416620275,
+    "decadal_std_err": 0.01125717416620275,
+    "hac_std_err": 0.0012863892199102998,
+    "hac_decadal_std_err": 0.012863892199102998,
+    "hac_t_stat": 12.5804885340596,
+    "hac_p_value": 0.0,
+    "hac_p_value_bound": "< 1e-24",
+    "hac_std_err_fs": 0.0012946619046534128,
+    "hac_decadal_std_err_fs": 0.012946619046534128,
+    "hac_t_stat_fs": 12.50010120267791,
+    "hac_p_value_fs": 0.0,
+    "hac_p_value_fs_bound": "< 1e-24",
+    "hac_df": 155
+  },
+  "mann_kendall": {
+    "s": 6882,
+    "var_s": 434052.6666666667,
+    "var_s_adj": 1826777.567295165,
+    "z": 10.444324182846895,
+    "z_adj": 5.0910659495681845,
+    "p_value": 0.0,
+    "p_value_adj": 3.560561485649316e-07,
+    "p_value_bound": "< 1e-24",
+    "p_value_adj_bound": "3.56e-07",
+    "rho1": 0.6160236534823388,
+    "vif": 4.208654173983107,
+    "rho1_detrended": 0.12276015802578473,
+    "vif_detrended": 1.2798782092466634,
+    "var_s_adj_detrended": 555534.5497320723,
+    "z_adj_detrended": 9.232004786832114,
+    "p_value_adj_detrended_bound": "< 1e-24",
+    "trend": "increasing",
+    "trend_adj": "increasing",
+    "is_significant": true,
+    "is_significant_adj": true
+  },
+  "sens_slope": {
+    "sens_slope_per_year": 0.016102870842551888,
+    "sens_decadal_rate": 0.16102870842551886,
+    "sens_intercept": -31.578014251214302
+  },
+  "model_evaluation": {
+    "metrics": {
+      "ml_model": {
+        "rmse": 1.6735664808506074,
+        "mae": 1.3346584212614496,
+        "r2": 0.9625196792753732
+      },
+      "climatology_baseline": {
+        "rmse": 2.1434323978115013,
+        "mae": 1.660046903530667,
+        "r2": 0.9385195635201473
+      },
+      "persistence_baseline": {
+        "rmse": 4.8472153898060215,
+        "mae": 4.257308546970307,
+        "r2": 0.685585911975876
+      }
+    },
+    "predictions": "           date target_date  ...  pred_persistence  residual_ml\n1583 2000-12-01  2001-01-01  ...         -0.500000     1.072951\n1584 2001-01-01  2001-02-01  ...          0.901613     0.901716\n1585 2001-02-01  2001-03-01  ...          2.167857    -1.436728\n1586 2001-03-01  2001-04-01  ...          4.232258     1.016571\n1587 2001-04-01  2001-05-01  ...         12.175000    -0.236321\n...         ...         ...  ...               ...          ...\n1887 2026-04-01  2026-05-01  ...         12.800000    -1.243468\n1888 2026-05-01  2026-06-01  ...         17.341935     0.058550\n1889 2026-06-01  2026-07-01  ...         23.003333    -0.921208\n1890 2026-07-01  2026-08-01  ...         24.674194    -0.448322\n1891 2026-08-01  2026-09-01  ...         24.298387    -0.576003\n\n[309 rows x 12 columns]",
+    "feature_coefficients": {
+      "sin_month": 0.8047328726737843,
+      "cos_month": -6.274266422785551,
+      "time_fraction": 0.3530051662544854,
+      "tavg_mean": 2.0143552040437633,
+      "tavg_lag_1": 0.27272598978829604,
+      "tavg_lag_2": -0.39535390100227735,
+      "tavg_lag_12": 0.5849555265610763,
+      "rolling_tavg_3m": 0.6974613514819515,
+      "rolling_tavg_12m": 0.04268852222499894,
+      "prcp_lag_1": 0.03046784215927352
+    },
+    "train_period": [
+      1870,
+      2000
+    ],
+    "test_period": [
+      2001,
+      2026
+    ],
+    "train_samples": 1570,
+    "test_samples": 309,
+    "train_feature_range": [
+      "1870-01",
+      "2000-11"
+    ],
+    "train_target_range": [
+      "1870-02",
+      "2000-12"
+    ],
+    "test_feature_range": [
+      "2000-12",
+      "2026-08"
+    ],
+    "test_target_range": [
+      "2001-01",
+      "2026-09"
+    ],
+    "feature_cols": [
+      "sin_month",
+      "cos_month",
+      "time_fraction",
+      "tavg_mean",
+      "tavg_lag_1",
+      "tavg_lag_2",
+      "tavg_lag_12",
+      "rolling_tavg_3m",
+      "rolling_tavg_12m",
+      "prcp_lag_1"
+    ],
+    "target_col": "target_next_tavg"
+  },
+  "top_warmest_records": [
+    {
+      "rank": 1,
+      "year": 2024,
+      "annual_tavg": 14.402579718205414,
+      "annual_anomaly": 1.8916177079471013
+    },
+    {
+      "rank": 2,
+      "year": 2023,
+      "annual_tavg": 14.390752688172043,
+      "annual_anomaly": 1.8797906779137303
+    },
+    {
+      "rank": 3,
+      "year": 2012,
+      "annual_tavg": 14.057698523050304,
+      "annual_anomaly": 1.546736512791991
+    },
+    {
+      "rank": 4,
+      "year": 2020,
+      "annual_tavg": 14.046888209121244,
+      "annual_anomaly": 1.5359261988629334
+    },
+    {
+      "rank": 5,
+      "year": 1991,
+      "annual_tavg": 13.99576644905274,
+      "annual_anomaly": 1.4848044387944277
+    }
+  ]
+}
