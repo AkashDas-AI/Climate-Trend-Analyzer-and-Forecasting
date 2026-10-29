@@ -1,0 +1,101 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments (Strictly local - Never commit)
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+*.secrets
+
+# Unit test / coverage reporting
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDE and Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project Data & Artifacts Hygiene (Keep gitkeep files tracked)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Output Artifacts Hygiene (Keep gitkeep files, canonical metrics, and reports tracked)
+outputs/figures/*
+!outputs/figures/.gitkeep
+outputs/metrics/*
+!outputs/metrics/.gitkeep
+!outputs/metrics/pipeline_metrics.json
+outputs/reports/*
+!outputs/reports/.gitkeep
+!outputs/reports/pipeline_report.md
+
+# Project local temporary directories
+tmp/
+temp/
+scratch/
+scratch/*
+
+# Personal Interview Preparation & Candidate Notes (Strictly Local - Never Push)
+docs/*INTERVIEW*
+docs/*PREP*
+docs/*interview*
+docs/*prep*
+

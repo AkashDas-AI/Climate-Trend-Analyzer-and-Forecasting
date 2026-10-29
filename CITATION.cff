@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software in your research or application, please cite it as below."
+authors:
+  - family-names: "Das"
+    given-names: "Akash"
+title: "Climate Trend Analyzer: Modular Framework for Real-World Climate Anomaly Detection, Trend Quantification, and Predictive Modeling"
+version: 0.2.0
+date-released: 2026-10-28
+type: software
+license: MIT
+
