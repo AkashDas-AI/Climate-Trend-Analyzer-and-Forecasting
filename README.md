@@ -1,5 +1,13 @@
 # Climate Trend Analyzer
 
+[![Python 3.10 | 3.11](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue.svg)](https://www.python.org/downloads/)
+[![Tests: 43 Passed](https://img.shields.io/badge/tests-43%20passed-brightgreen.svg)](docs/TESTING.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Data: NOAA GHCN-Daily](https://img.shields.io/badge/data-NOAA%20GHCN--Daily-blue.svg)](https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily)
+[![Inference: Newey-West HAC](https://img.shields.io/badge/inference-Newey--West%20HAC-orange.svg)](docs/STATISTICAL_ANALYSIS.md)
+[![Model: Ridge ML R2=0.963](https://img.shields.io/badge/model-Ridge%20ML%20(R%C2%B2%3D0.963)-blueviolet.svg)](docs/MODEL_METHODOLOGY.md)
+[![Framework: Streamlit](https://img.shields.io/badge/framework-Streamlit-red.svg)](app/streamlit_app.py)
+
 **Author**: Akash Das  
 **License**: MIT License (see `LICENSE`)  
 **Data Source**: NOAA Global Historical Climatology Network Daily (GHCN-Daily), Station `USW00094728`  
