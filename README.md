@@ -1,5 +1,6 @@
 # Climate Trend Analyzer
 
+[![CI Test Suite](https://github.com/AkashDas-AI/Climate-Trend-Analyzer-and-Forecasting/actions/workflows/tests.yml/badge.svg)](https://github.com/AkashDas-AI/Climate-Trend-Analyzer-and-Forecasting/actions/workflows/tests.yml)
 [![Python 3.10 | 3.11](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue.svg)](https://www.python.org/downloads/)
 [![Tests: 43 Passed](https://img.shields.io/badge/tests-43%20passed-brightgreen.svg)](docs/TESTING.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
