@@ -346,7 +346,18 @@ Stop-Process -Id $proc.Id -Force
 | **122** | CI Test Suite Robustness & NOAA Fetch Step | Code edit `.github/workflows/tests.yml` & `tests/test_dashboard.py` | `0` | Added graceful skip guards for clean checkouts when raw data is not present; added automated NOAA fetch step in CI workflow. All 6 GitHub Actions matrix runner jobs verified passing. Committed as `37c9f70` and `5d4986e`. |
 | **123** | Comprehensive Data Science Pipeline Badges | Code edit `README.md` | `0` | Analyzed codebase across 16 technical dimensions (pipeline, statistical tests, validation, EDA, features, outlier detection, data source, sample size, missing values, scaling, correlation, decomposition, format, stationarity, experiment tracking, notebook); added 18 tailored, fact-grounded shields.io badges. Committed as `264cff8`. |
 | **124** | CI Determinism & Network Independence | Code edit `.github/workflows/tests.yml` | `0` | Removed flaky external network fetch step so CI executes deterministic offline test suite. All 6 GitHub Actions matrix runner jobs verified passing (Run ID: `41022134659`). Committed as `a6b2f82`. |
-| **125** | Documentation Synchronization & Test Architecture Alignment | Code edit `docs/TESTING.md` & `docs/PROJECT_STATUS.md` | `0` | Clarified clean-environment test execution principles and aligned file references. |
+| **125** | Documentation Synchronization & Test Architecture Alignment | Code edit `docs/TESTING.md` & `docs/PROJECT_STATUS.md` | `0` | Clarified clean-environment test execution principles and aligned file references. Committed as `94526f8`. |
+
+---
+
+## 19. Post-Publication: Local Environment Cleanup and Repository Preservation
+
+### Verification Commands & Results
+
+| Step # | Operation / Audit Target | Command Line Executed | Exit Code | Verified Finding |
+| :---: | :--- | :--- | :---: | :--- |
+| **126** | Comprehensive Local Cleanup & Repository Preservation | Directory audit, removal commands, and `.gitignore` update | `0` | Executed safe local cleanup following successful GitHub release. Removed local `.venv/` (776.44 MB), development scratch folder `scratch/` (1.21 MB), Python bytecode caches (`__pycache__/`, 0.25 MB), and redundant viewport captures (`outputs/figures/*.png`, 2.65 MB), reclaiming approximately 780.55 MB. Preserved 100% of production source code, tests, documentation, tracked images (`Images/`), reproducible data (`data/raw/USW00094728.csv`, `data/processed/`), and complete Git history. Strengthened `.gitignore` with `docs/*CLEANUP*` and `docs/*RESTORATION*`. Authored strictly local restoration guide in `docs/LOCAL_CLEANUP_AND_RESTORATION.md`. |
+
 
 
 

@@ -99,3 +99,10 @@ docs/*PREP*
 docs/*interview*
 docs/*prep*
 
+# Local Maintenance & Environment Restoration Guides (Strictly Local - Never Push)
+docs/*CLEANUP*
+docs/*RESTORATION*
+docs/*cleanup*
+docs/*restoration*
+
+
