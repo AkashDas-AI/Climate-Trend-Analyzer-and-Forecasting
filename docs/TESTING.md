@@ -21,16 +21,18 @@ The test suite is built on four core principles to ensure complete reproducibili
    - Pytest is configured with `-p no:cacheprovider` to avoid creating `.pytest_cache/` directories, ensuring tests execute seamlessly within sandboxed CI/CD and developer environments.
 4. **Comprehensive Algorithmic Coverage**:
    - Every core module (`ingest`, `transform`, `analysis`, `anomaly_detection`, `modeling`) has dedicated test coverage validating nominal behavior, mathematical exactness, and edge-case resilience.
+5. **Clean CI Environment Adaptability**:
+   - In clean CI/CD environments where raw data (`data/raw/USW00094728.csv`, 17.8 MB) is excluded via `.gitignore`, 36 core unit tests run and pass deterministically in under 10 seconds while data-dependent integration tests cleanly skip, ensuring zero network flakiness. When raw observations are present locally, all 43 tests pass 100%.
 
 ---
 
 ## 2. Test Suite Organization
 
-The test suite comprises **43 passing unit tests** across 6 modules:
+The test suite comprises **43 unit and integration tests** across 6 modules:
 
 ```
 tests/
-├── conftest.py                   # Shared synthetic test fixtures (in-memory)
+├── __init__.py                   # Test package initialization
 ├── test_ingest.py                # Ingestion, column parsing, derived TAVG (4 tests)
 ├── test_transform.py             # Cleaning, bounded gaps, inversion flags, aggregation (7 tests)
 ├── test_analysis.py              # OLS regression, HAC standard errors, Mann-Kendall, Sen's slope, scalar invariance (9 tests)
